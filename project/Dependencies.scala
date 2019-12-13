@@ -1,3 +1,4 @@
+import sbt.Keys.libraryDependencies
 import sbt._
 
 object Dependencies {
@@ -18,6 +19,7 @@ object Dependencies {
     Libs.`jamm`,
     Libs.`pcj`,
     Libs.`scalaTest` % Test,
-    Libs.`mockito` % Test
+    Libs.`mockito` % Test,
+    "org.assertj" % "assertj-core" % "2.4.1" % Test
   )
 }

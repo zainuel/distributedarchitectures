@@ -4,9 +4,9 @@ import java.util
 
 import org.I0Itec.zkclient.IZkChildListener
 import org.dist.queue.common.Logging
-import org.dist.simplekafkaimpl.ZooKeeperClient
+import org.dist.simplekafkaimpl.NewZooKeeperClient
 
-class NewBrokerChangeListener(testListener: NewController, zookeeperClient:ZooKeeperClient) extends IZkChildListener with Logging {
+class NewBrokerChangeListener(testListener: NewController, zookeeperClient:NewZooKeeperClient) extends IZkChildListener with Logging {
   import scala.jdk.CollectionConverters._
 
   override def handleChildChange(parentPath: String, currentBrokerList: util.List[String]): Unit = {
